@@ -1,0 +1,27 @@
+<template name="singleEvent">
+
+  <div class="ui page grid one column center aligned stackable">
+    <div class="column">
+      <div class="ui segment">
+        <div class="ui header">{{name}}</div>
+        <div class="content">
+          <p>{{date}}</p>
+          <p>Aforo Total : {{aforo}}</p>
+          <p>url : {{slug}}</p>
+          <p>Este taller durara : {{duracion}} horas</p>
+          <p>Number of attendees : {{numberOfAttendees}}</p>
+          {{#each usersGoing}}
+            <p><img src="{{profile.gravatar}}" class="image avatar ui" alt="">{{username}}</p>
+          {{/each}}
+
+          <p>There are {{placesLeft}} places left</p>
+        </div>
+      </div>
+      <div class="ui horizontal icon divider"><i class="icon circular user"></i></div>
+      <div class="ui basic segment">
+        <div class="ui button green attend">I want to Attend</div>
+      </div>
+    </div>
+  </div>
+
+</template>

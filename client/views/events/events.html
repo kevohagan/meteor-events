@@ -1,0 +1,73 @@
+<template name="events">
+
+
+  <div class=" one column ui grid main-title">
+    <div class="CoverImage FlexEmbed FlexEmbed--3by1" style="background-image:url(/img/header.jpg);"></div>
+
+    <div class="column page-title">
+      <div class="basic segment">
+        <div class="ui center aligned inverted header">
+         <h1>This is some Test Page</h1>
+         <div class="sub header">You can put any random stuff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{{>eventsForm}}
+
+
+
+  <div class="ui page grid one column center aligned">
+    <div class="column">
+      <div class="basic segment ui">
+      {{#each events}}
+        <a href="{{pathFor 'singleEvent'}}"><h1>{{name}}</h1></a>
+      {{/each}}
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</template>
+
+
+
+
+
+<template name="eventsForm">
+  <div class="ui page grid one column center aligned stackable">
+    <div class="column">
+      <div class="ui form">
+        <div class="ui four fields">
+          <div class="field">
+            <label>Name</label>
+            <input id="name" type="text" placeholder="First Name">
+          </div>
+          <div class="field">
+            <label>Date</label>
+            <input id="date" type="date" placeholder="Date">
+          </div>
+          <div class="field">
+            <label>Aforo limitado</label>
+            <input id ="aforo" type="number" placeholder="Aforo">
+          </div>
+          <div class="field">
+            <label> Duracion</label>
+            <input type="number" id="duracion" placeholder="duracion">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui button green submit">Submit</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
