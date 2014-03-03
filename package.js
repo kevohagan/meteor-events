@@ -29,6 +29,11 @@ Package.on_use(function (api) {
 
 //Adding your files to app
 
+  //on both
+  api.add_files([
+    'collections.coffee'
+  ], both);
+
   //on the client
   api.add_files([
     'client/views/events/events.html',
@@ -39,15 +44,11 @@ Package.on_use(function (api) {
   ], 'client');
 
 
-
   //on the server
   api.add_files([
     'server/accounts.coffee'
   ], "server");
 
 
-  //on both
-  api.add_files([
-    'collections.coffee'
-  ], both);
+
 });
