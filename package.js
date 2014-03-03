@@ -13,7 +13,8 @@ Package.on_use(function (api) {
   'coffeescript',
   'ms-seo',
   'gravatar',
-  'accounts-base'
+  'accounts-base',
+  'minimongoid'
   ], both);
 
   api.use([
