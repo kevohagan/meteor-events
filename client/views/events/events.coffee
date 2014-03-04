@@ -5,11 +5,8 @@ Template.events.rendered = ->
 Template.events.helpers
   events: () ->
     return Events.find()
-
-Template.events.events {}
-
-
-
+  teacher: () ->
+    return Meteor.user(_id:@user_id).username
 
 
 Template.eventsForm.events
@@ -22,4 +19,5 @@ Template.eventsForm.events
       date: $(tpl.find('#date')).val()
       aforo: $(tpl.find('#aforo')).val()
       duracion: $(tpl.find('#duracion')).val()
+      description: $(tpl.find('#description')).val()
     )

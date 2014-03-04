@@ -14,25 +14,30 @@
     </div>
   </div>
 
+<div class="ui items">
+{{#each events}}
+  <div class="item">
+     <a href="{{pathFor 'singleEvent'}}" class="image">
+
+        <img src="img/header2.jpg">
+        <a class=" ui corner label">
+          <i class="checkmark green icon"></i>
+        </a>
+
+      <div class="content">
+        <div class="name">{{name}}</div>
+        <p class="description">{{description}}</p>
+        <div class="extra">
+             {{numberOfAttendees}} people are going
+        </div>
+      </div>
+      </a>
+  </div>
+{{/each}}
+</div>
+
 
 {{>eventsForm}}
-
-
-
-  <div class="ui page grid one column center aligned">
-    <div class="column">
-      <div class="basic segment ui">
-      {{#each events}}
-        <a href="{{pathFor 'singleEvent'}}"><h1>{{name}}</h1></a>
-      {{/each}}
-      </div>
-    </div>
-  </div>
-
-
-
-
-
 
 </template>
 
@@ -61,6 +66,10 @@
             <label> Duracion</label>
             <input type="number" id="duracion" placeholder="duracion">
           </div>
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea id="description"></textarea>
         </div>
 
         <div class="field">
