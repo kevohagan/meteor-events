@@ -1,4 +1,9 @@
 
+Template.eventsForm.helpers
+  events: () ->
+    return Events.find()
+
+
 Template.eventsForm.events
 
   'click .submit': (e,tpl) ->

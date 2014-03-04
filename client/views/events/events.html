@@ -1,13 +1,9 @@
 <template name="events">
 
-
-
 <div class="ui items">
 {{#each events}}
   <div class="item">
-     <a href="{{pathFor 'singleEvent'}}" class="image">
-
-        <img src="img/header2.jpg">
+        <img src="img/header2.jpg" class="ui image">
         <a class=" ui corner label">
           <i class="checkmark green icon"></i>
         </a>
@@ -19,13 +15,9 @@
              {{numberOfAttendees}} people are going
         </div>
       </div>
-      </a>
   </div>
 {{/each}}
 </div>
-
-
-{{>eventsForm}}
 
 </template>
 

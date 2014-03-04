@@ -15,6 +15,9 @@ Router.map ->
       Events.first slug: @params.slug  if @ready()
 
 
-  # before: function () {
-  #   var singleEvent = this.getData();
-  # }
+  @route "adminEvents",
+    path: "/admin/events"
+    template: "eventsForm"
+    controller: "AdminController"
+    before: ->
+      Meteor.subscribe "events"

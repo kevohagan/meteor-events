@@ -31,5 +31,20 @@
       </div>
 
     </div>
+
+
+
+    <div class="column">
+      <div class="basic segment ui">
+        <div class="ui divided list">
+          {{#each events}}
+            <div class="item">
+              <div class="right floated tiny teal ui button">{{numberOfAttendees}} of people</div>
+              <a href="{{pathFor 'singleEvent'}}" class="content">{{name}}</a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>

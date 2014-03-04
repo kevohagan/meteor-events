@@ -40,6 +40,8 @@ Package.on_use(function (api) {
     'client/views/events/events.coffee',
     'client/views/events/singleEvent.html',
     'client/views/events/singleEvent.coffee',
+    'client/views/events/admin/eventsForm.html',
+    'client/views/events/admin/eventsForm.coffee',
     'router.coffee',
   ], 'client');
 
