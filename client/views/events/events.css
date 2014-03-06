@@ -1,0 +1,46 @@
+/* Double Diagonal line */
+
+.ss-style-doublediagonal {
+  z-index: 1;
+  padding-top: 6em;
+  background: #2072a7;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+  height: 50%;
+  background: #116094;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+}
+
+section {
+  position: relative;
+  padding: 10em 10%;
+  background: #2980b9;
+  color: #fff;
+  text-align: center;
+}
+
+/* Common style for pseudo-elements */
+section::before,
+section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}

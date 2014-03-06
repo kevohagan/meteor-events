@@ -40,6 +40,7 @@ Package.on_use(function (api) {
     'client/boot.coffee',
     'client/views/events/events.html',
     'client/views/events/events.coffee',
+    'client/views/events/events.css',
     'client/views/events/singleEvent.html',
     'client/views/events/singleEvent.coffee',
     'client/views/events/singleEvent.css',
