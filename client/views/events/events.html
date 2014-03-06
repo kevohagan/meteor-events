@@ -1,0 +1,36 @@
+<template name="events">
+
+
+<div class="ui grid one column">
+  <div class="column" style="margin:0; padding:0;overflow:hidden;">
+    <div class="ui left aligned header transition " id="events-header" style="padding:2em;">
+      Some awesome workshops we do
+    </div>
+
+    <section id="events-list">
+      <div class="column">
+        <div class="ui header icon"><i class="icon circular bullseye"></i></div>
+        <div class="ui header">We provide great workshops 100% free because we believe in open-source and open-mind. Our community is passionate for code and wants everone to benefit from it.</div>
+      </div>
+      <div class="ui section divider"></div>
+      <div class="ui three column center aligned stackable grid">
+        {{#each events}}
+        <div class="column">
+          <div class="ui icon header">
+            <i class="time icon"></i>
+            <p>{{eventDate date}}</p>
+            <p>{{name}}</p>
+          </div>
+          <p>{{description}}</p>
+          <p>{{numberOfAttendees}} people are going to his event</p>
+          <p><a class="ui green icon button" href="{{pathFor 'singleEvent'}}">Check it</a></p>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+</template>
+

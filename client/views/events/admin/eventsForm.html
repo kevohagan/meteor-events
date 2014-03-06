@@ -1,0 +1,61 @@
+<template name="eventsForm">
+<div class="ui page grid one column center aligned stackable">
+    <div class="column">
+      <div class="ui feed segment">
+        {{#each events}}
+        <div class="event">
+          <div class="label">
+            <i class="icon users circular"></i>
+          </div>
+          <div class="content">
+            <div class="date">
+              <a href="{{pathFor 'singleEventEdit'}}" class="ui green button">Edit</a>
+            </div>
+            <div class="summary">
+               <a href="{{pathFor 'singleEvent'}}">{{name}} - <span>{{date}}</span> - {{numberOfAttendees}} of people are going</a>
+
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui form">
+        <div class="ui four fields">
+          <div class="field">
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Name of Event">
+          </div>
+          <div class="field">
+            <label>Date</label>
+            <input id="date" type="date" placeholder="Date">
+          </div>
+          <div class="field">
+            <label>Capacity</label>
+            <input id ="capacity" type="number" placeholder="capacity">
+          </div>
+          <div class="field">
+            <label> Duration</label>
+            <input type="number" id="duration" placeholder="duration">
+          </div>
+        </div>
+        <div class="field">
+          <label>Location</label>
+          <input type="text" id="location" placeholer="location">
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea id="description"></textarea>
+        </div>
+
+        <div class="field">
+          <div class="ui button green submit">Submit</div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</template>
