@@ -1,21 +1,5 @@
 <template name="events">
 
-<div class="ui items">
-{{#each events}}
-  <a href="{{pathFor 'singleEvent'}}" class="item">
-      <img src="img/header2.jpg" class="ui image">
-      <span class="ui corner label">
-        <i class="checkmark green icon"></i>
-      </span>
-      <div class="content">
-        <div class="name">{{name}}</div>
-        <p class="description">{{description}}</p>
-        <div class="extra">{{numberOfAttendees}} people are going</div>
-      </div>
-  </a>
-{{/each}}
-</div>
-
 <div class="ui massive selection relaxed list">
   {{#each events}}
     <a href="{{pathFor 'singleEvent'}}" class="item">
