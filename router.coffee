@@ -8,8 +8,8 @@ Router.map ->
 
   @route "singleEvent",
     path: "/events/:slug"
-    waitOn: -> # wait for the subscription to be ready; see below
-      Meteor.subscribe "singleEvent", @params.slug
+    before: -> # wait for the subscription to be ready; see below
+     @subscribe("singleEvent", @params.slug).wait()
 
     data: ->
       Events.first slug: @params.slug  if @ready()

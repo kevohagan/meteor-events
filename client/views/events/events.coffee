@@ -1,5 +1,6 @@
 Template.events.rendered = ->
-
+  $(".ui.header.transition").transition "fade up", "2s"
+  return
 
 
 Template.events.helpers
