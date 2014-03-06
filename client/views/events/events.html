@@ -2,21 +2,53 @@
 
 <div class="ui items">
 {{#each events}}
-  <div class="item">
-        <img src="img/header2.jpg" class="ui image">
-        <a class=" ui corner label">
-          <i class="checkmark green icon"></i>
-        </a>
-
+  <a href="{{pathFor 'singleEvent'}}" class="item">
+      <img src="img/header2.jpg" class="ui image">
+      <span class="ui corner label">
+        <i class="checkmark green icon"></i>
+      </span>
       <div class="content">
         <div class="name">{{name}}</div>
         <p class="description">{{description}}</p>
-        <div class="extra">
-             {{numberOfAttendees}} people are going
-        </div>
+        <div class="extra">{{numberOfAttendees}} people are going</div>
       </div>
-  </div>
+  </a>
 {{/each}}
+</div>
+
+<div class="ui massive selection relaxed list">
+  {{#each events}}
+    <a href="{{pathFor 'singleEvent'}}" class="item">
+      <div class="left floated icon header ui">
+        <i class="icon mail"></i>{{eventDate date}}
+      </div>
+      <div class="content">
+        <h2 class="ui header">{{name}}</h2>
+        <p>{{description}}</p>
+        <p>{{teacher}} is the teacher of this event</p>
+        <div class="extra">{{numberOfAttendees}} people are going to his event</div>
+      </div>
+    </a>
+  {{/each}}
+</div>
+
+<div class="ui page grid four columns stackable">
+  <div class="column">
+      <section class="col-3 ss-style-doublediagonal">
+        <div class="column">
+          <span class="icon icon-home"></span>
+          <p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+        </div>
+        <div class="column">
+          <span class="icon icon-bullhorn"></span>
+          <p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+        </div>
+        <div class="column">
+          <span class="icon icon-blog"></span>
+          <p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+        </div>
+      </section>
+  </div>
 </div>
 
 </template>

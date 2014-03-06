@@ -1,26 +1,22 @@
-Template.eventsForm.rendered = (tpl) ->
-  $(tpl.find('#name')).val()  ''
-
-Template.eventsForm.helpers
-  events: () ->
-    return Events.find()
+Template.singleEventEdit.rendered = () ->
 
 
-Template.eventsForm.events
 
-  'click .submit': (e,tpl) ->
+Template.singleEventEdit.events
+  'click .submit': () ->
     e.preventDefault()
-    Events.create(
+    Events.update(
       teacher_id: Meteor.userId()
       name: $(tpl.find('#name')).val()
       date: $(tpl.find('#date')).val()
       capacity: $(tpl.find('#capacity')).val()
       location: $(tpl.find('#location')).val()
-      duracion: $(tpl.find('#duration')).val()
+      duracion: $(tpl.find('#duracion')).val()
       description: $(tpl.find('#description')).val()
     )
 
-  'click .delete': (e,tpl) ->
+  'click .delete': (e, tpl) ->
+    e.preventDefault()
     if confirm 'Are you sure?'
       @destroy()
-
+      Router.go 'adminEvents'

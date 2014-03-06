@@ -4,8 +4,17 @@ Template.events.rendered = ->
 
 Template.events.helpers
   events: () ->
-    return Events.find()
-  teacher: () ->
-    return Meteor.user(_id:@user_id).username
+    return Events.find {},
+            sort:
+              date: -1
+
+  # teacher: () ->
+  #   Meteor.users.findOne(
+  #     _id: @teacher_id
+  #   ,
+  #     fields:
+  #       username: 1
+  #   ).username
+
 
 

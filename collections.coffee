@@ -34,14 +34,14 @@ class @Events extends Minimongoid
   attendEvent: (user) ->
     if not user
       # throw new Meteor.Error(401, "You have to register as a user to attend event")
-      Meteor.Errors.throw("You have to register as a user to attend event")
+      Meteor.Errors.throw("info","You have to register as a user to attend event")
 
     if _.contains @attendees, user._id
-      Meteor.Errors.throw("You are already attending the event")
+      Meteor.Errors.throw("warning","You are already attending the event")
       # throw new Meteor.Error(401, "You are already attending the event")
 
-    else if @aforo - @numberOfAttendees < 1
-      Meteor.Errors.throw("The event is full bro!")
+    else if @capacity - @numberOfAttendees < 1
+      Meteor.Errors.throw("warning","The event is full bro!")
 
     else
       @push attendees: user._id

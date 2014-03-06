@@ -23,7 +23,8 @@ Package.on_use(function (api) {
     'underscore',
     'iron-router',
     'meteor-errors-sui',
-    'moment'
+    'moment',
+    'semantic-ui'
   ], 'client');
 
 
@@ -36,12 +37,16 @@ Package.on_use(function (api) {
 
   //on the client
   api.add_files([
+    'client/boot.coffee',
     'client/views/events/events.html',
     'client/views/events/events.coffee',
     'client/views/events/singleEvent.html',
     'client/views/events/singleEvent.coffee',
+    'client/views/events/singleEvent.css',
     'client/views/events/admin/eventsForm.html',
     'client/views/events/admin/eventsForm.coffee',
+    'client/views/events/admin/singleEventEdit.html',
+    'client/views/events/admin/singleEventEdit.coffee',
     'router.coffee',
   ], 'client');
 
