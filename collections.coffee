@@ -54,8 +54,7 @@ class @Events extends Minimongoid
 
 Events._collection.allow
   insert: (userId, item) ->
-    Roles.userIsInRole(userId, "admin")
-    # Meteor.user()
+    Meteor.user()
 
   update: (userId, item, fields) ->
     Meteor.user()
