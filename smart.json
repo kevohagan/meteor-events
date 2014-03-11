@@ -1,0 +1,18 @@
+{
+  "name": "events",
+  "description": "Events management",
+  "homepage": "http://github.com/kevohagan/meteor-events.git",
+  "author": "Kevin O'Hagan (@kevohagan)",
+  "version": "0.0.1",
+  "git": "http://github.com/kevohagan/meteor-events.git",
+  "packages": {
+    "iron-router": "0.6.4",
+    "minimongoid": "0.8.3",
+    "moment": {},
+    "roles": "1.2.6",
+    "semantic-ui": {},
+    "meteor-errors-sui": {
+      "git": "https://github.com/kevohagan/meteor-errors-sui.git"
+    },
+  }
+}
